@@ -1,0 +1,7 @@
+<main class="">
+    <h1 class="title">Welcome to note taker!</h1>
+    <p>An application to make notes easily!</p>
+    {{#if currentUser}}
+        Hello {{currentUser.details.username}}! Make your first note <a href="/thanosan/notes">here</a>!
+    {{/if}}
+</main>

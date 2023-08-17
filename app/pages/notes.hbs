@@ -1,0 +1,23 @@
+<main>
+    <div>
+        <div class="note">
+            <div>
+                <h1>Your Notes</h1>
+                <p>Click each note to edit!</p>
+            </div>
+            <ul array key="notes" sortable>
+                {{#for note in notes}}
+                <li object key:text="@innerText" edit:text edit-control>{{default note.text "New note"}}</li>
+                {{/for}}
+            </ul>
+            <button new:note>Add Note</button>
+            <br>
+            <br>
+        </div>
+        <div class="image-upload" object key:note-img="@search">
+            <h2>Want to take a picture of your notes! Save them here:</h2>
+            <input update:note-img type="file">
+            <img target:note-img="@attr:src" src="{{noteImg}}">
+        </div>
+    </div>
+</main>

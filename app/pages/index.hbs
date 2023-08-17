@@ -1,0 +1,10 @@
+<main>
+
+  <h1>Welcome to notemaker (made using Remake)!</h1>
+    {{#if currentUser}}
+      <a href="/{{currentUser.details.username}}">Go to your dashboard</a>
+    {{else}}
+      <a href="/user/signup">Sign up for an account</a>
+    {{/if}}
+  </ul>
+</main>
